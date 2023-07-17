@@ -10,6 +10,7 @@
  */
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\Helper\ModuleHelper;
 
 // No direct access
 defined('_JEXEC') or die('Restricted access');
@@ -20,7 +21,7 @@ JLoader::import('joomla.application.module.helper');
 /**
  * Helper for usage in Joomla!/MageBridge modules and templates
  */
-class MageBridgeModuleHelper extends JModuleHelper
+class MageBridgeModuleHelper extends ModuleHelper
 {
     /**
      * Load all MageBridge-modules
@@ -33,7 +34,7 @@ class MageBridgeModuleHelper extends JModuleHelper
             static $modules = null;
 
             if (is_array($modules) == false) {
-                $modules = JModuleHelper::load();
+                $modules = ModuleHelper::load();
                 foreach ($modules as $index => $module) {
                     if (strstr($module->module, 'mod_magebridge') == false) {
                         unset($modules[$index]);

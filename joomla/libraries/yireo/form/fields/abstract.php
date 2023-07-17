@@ -14,12 +14,12 @@ defined('JPATH_BASE') or die();
 
 use Joomla\CMS\Factory;
 
-class YireoFormFieldAbstract extends JFormField
+class YireoFormFieldAbstract extends \Joomla\CMS\Form\FormField
 {
     /**
      * Method to instantiate the form field object.
      *
-     * @param JForm $form
+     * @param \Joomla\CMS\Form\Form $form
      * @return void
      */
     public function __construct($form = null)

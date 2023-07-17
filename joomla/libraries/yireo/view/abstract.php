@@ -21,6 +21,6 @@ require_once dirname(__FILE__) . '/../loader.php';
  *
  * @package Yireo
  */
-class YireoAbstractView extends JViewLegacy
+class YireoAbstractView extends \Joomla\CMS\MVC\View\HtmlView
 {
 }

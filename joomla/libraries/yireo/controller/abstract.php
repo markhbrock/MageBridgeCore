@@ -19,7 +19,7 @@ require_once dirname(__FILE__) . '/../loader.php';
  *
  * @package Yireo
  */
-class YireoAbstractController extends JControllerLegacy
+class YireoAbstractController extends \Joomla\CMS\MVC\Controller\BaseController
 {
     /**
      * Constructor

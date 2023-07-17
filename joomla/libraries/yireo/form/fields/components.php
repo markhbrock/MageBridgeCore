@@ -10,6 +10,7 @@
  */
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 
 // Check to ensure this file is included in Joomla!
@@ -23,7 +24,7 @@ JLoader::import('joomla.form.formfield');
 /**
  * Form Field-class for selecting a component
  */
-class YireoFormFieldComponents extends JFormField
+class YireoFormFieldComponents extends \Joomla\CMS\Form\FormField
 {
     /*
      * Form field type
@@ -50,12 +51,12 @@ class YireoFormFieldComponents extends JFormField
         $options = [];
 
         foreach ($components as $component) {
-            $options[] = JHtml::_('select.option', $component->element, Text::_($component->name) . ' [' . $component->element . ']', 'value', 'text');
+            $options[] = HTMLHelper::_('select.option', $component->element, Text::_($component->name) . ' [' . $component->element . ']', 'value', 'text');
         }
 
         $size = (count($options) > 12) ? 12 : count($options);
         $attribs = 'class="inputbox" multiple="multiple" size="' . $size . '"';
 
-        return JHtml::_('select.genericlist', $options, $name, $attribs, 'value', 'text', $value, $name);
+        return HTMLHelper::_('select.genericlist', $options, $name, $attribs, 'value', 'text', $value, $name);
     }
 }
