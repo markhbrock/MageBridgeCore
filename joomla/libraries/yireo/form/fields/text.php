@@ -20,7 +20,7 @@ include_once JPATH_LIBRARIES . '/joomla/form/fields/text.php';
 /*
  * Form Field-class for showing a yes/no field
  */
-class YireoFormFieldText extends JFormFieldText
+class YireoFormFieldText extends \Joomla\CMS\Form\Field\TextField
 {
     /**
      * @param SimpleXMLElement $element

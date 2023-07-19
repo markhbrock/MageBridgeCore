@@ -23,7 +23,7 @@ include_once JPATH_LIBRARIES . '/joomla/form/fields/radio.php';
  * Form Field-class for showing a yes/no field
  */
 
-class YireoFormFieldPublished extends JFormFieldRadio
+class YireoFormFieldPublished extends \Joomla\CMS\Form\Field\RadioField
 {
     /*
      * Form field type

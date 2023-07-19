@@ -20,7 +20,7 @@ require_once JPATH_SITE . '/libraries/joomla/form/fields/file.php';
 /**
  * Form Field-class for selecting a component
  */
-class YireoFormFieldFile extends JFormFieldFile
+class YireoFormFieldFile extends \Joomla\CMS\Form\Field\FileField
 {
     /*
      * Form field type
