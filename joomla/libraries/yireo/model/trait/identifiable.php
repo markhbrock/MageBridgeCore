@@ -29,6 +29,11 @@ trait YireoModelTraitIdentifiable
     protected $id = 0;
 
     /**
+     * @var mixed
+     */
+    protected $data;
+
+    /**
      * @return int
      */
     public function getId()
