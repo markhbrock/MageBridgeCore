@@ -16,9 +16,6 @@ use Joomla\CMS\Helper\ModuleHelper;
 // No direct access
 defined('_JEXEC') or die('Restricted access');
 
-// Import the general module-helper
-JLoader::import('joomla.application.module.helper');
-
 /**
  * Helper for usage in Joomla!/MageBridge modules and templates
  */
